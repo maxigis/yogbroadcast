@@ -1,13 +1,13 @@
 Problem:    tp
-Rows:       130
+Rows:       133
 Columns:    60 (60 integer, 60 binary)
-Non-zeros:  288
+Non-zeros:  294
 Status:     INTEGER OPTIMAL
-Objective:  z = 170 (MAXimum)
+Objective:  z = 195 (MAXimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
-     1 z                         170                             
+     1 z                         195                             
      2 inicio[ARQ1,1]
                                   -1            -1               
      3 inicio[ARQ1,2]
@@ -200,6 +200,12 @@ Objective:  z = 170 (MAXimum)
                                    2                           2 
    130 evento_hora[9]
                                    1                           2 
+   131 transmision_final[ARQ]
+                                   0            -0               
+   132 transmision_final[ATL]
+                                   0            -0               
+   133 transmision_final[BAD]
+                                   0            -0               
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
