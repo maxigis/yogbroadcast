@@ -3,11 +3,11 @@ Rows:       130
 Columns:    60 (60 integer, 60 binary)
 Non-zeros:  288
 Status:     INTEGER OPTIMAL
-Objective:  z = 120 (MAXimum)
+Objective:  z = 170 (MAXimum)
 
    No.   Row name        Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
-     1 z                         120                             
+     1 z                         170                             
      2 inicio[ARQ1,1]
                                   -1            -1               
      3 inicio[ARQ1,2]
@@ -37,21 +37,21 @@ Objective:  z = 120 (MAXimum)
     15 inicio[ARQ2,5]
                                    0            -5               
     16 inicio[ARQ2,6]
-                                   0            -6               
+                                  -6            -6               
     17 inicio[ARQ2,7]
-                                   0            -7               
+                                  -6            -7               
     18 inicio[ARQ2,8]
-                                   0            -8               
+                                  -6            -8               
     19 inicio[ARQ2,9]
                                    0            -9               
     20 inicio[ATL1,1]
-                                   0            -1               
+                                  -1            -1               
     21 inicio[ATL1,2]
-                                   0            -2               
+                                  -1            -2               
     22 inicio[ATL1,3]
-                                   0            -3               
+                                  -1            -3               
     23 inicio[ATL1,4]
-                                   0            -4               
+                                  -1            -4               
     24 inicio[ATL1,5]
                                    0            -5               
     25 inicio[ATL1,6]
@@ -87,9 +87,9 @@ Objective:  z = 120 (MAXimum)
     40 inicio[BAD1,3]
                                    0            -3               
     41 inicio[BAD1,4]
-                                  -4            -4               
+                                   0            -4               
     42 inicio[BAD1,5]
-                                  -4            -5               
+                                   0            -5               
     43 inicio[BAD1,6]
                                    0            -6               
     44 inicio[BAD1,7]
@@ -130,14 +130,14 @@ Objective:  z = 120 (MAXimum)
     67 fin[ARQ2,3]                 0            -9               
     68 fin[ARQ2,4]                 0            -9               
     69 fin[ARQ2,5]                 0            -9               
-    70 fin[ARQ2,6]                 0            -9               
-    71 fin[ARQ2,7]                 0            -9               
-    72 fin[ARQ2,8]                 0            -9               
+    70 fin[ARQ2,6]                -7            -9               
+    71 fin[ARQ2,7]                -8            -9               
+    72 fin[ARQ2,8]                -9            -9               
     73 fin[ARQ2,9]                 0            -9               
-    74 fin[ATL1,1]                 0            -5               
-    75 fin[ATL1,2]                 0            -5               
-    76 fin[ATL1,3]                 0            -5               
-    77 fin[ATL1,4]                 0            -5               
+    74 fin[ATL1,1]                -2            -5               
+    75 fin[ATL1,2]                -3            -5               
+    76 fin[ATL1,3]                -4            -5               
+    77 fin[ATL1,4]                -5            -5               
     78 fin[ATL1,5]                 0            -5               
     79 fin[ATL1,6]                 0            -5               
     80 fin[ATL1,7]                 0            -5               
@@ -155,8 +155,8 @@ Objective:  z = 120 (MAXimum)
     92 fin[BAD1,1]                 0            -6               
     93 fin[BAD1,2]                 0            -6               
     94 fin[BAD1,3]                 0            -6               
-    95 fin[BAD1,4]                -5            -6               
-    96 fin[BAD1,5]                -6            -6               
+    95 fin[BAD1,4]                 0            -6               
+    96 fin[BAD1,5]                 0            -6               
     97 fin[BAD1,6]                 0            -6               
     98 fin[BAD1,7]                 0            -6               
     99 fin[BAD1,8]                 0            -6               
@@ -183,31 +183,31 @@ Objective:  z = 120 (MAXimum)
    120 y_sup[BAD1]                 0                          -0 
    121 y_sup[BAD2]                 0                          -0 
    122 evento_hora[1]
-                                   1                           1 
+                                   2                           2 
    123 evento_hora[2]
-                                   1                           1 
+                                   2                           2 
    124 evento_hora[3]
-                                   1                           1 
+                                   2                           2 
    125 evento_hora[4]
-                                   1                           1 
+                                   1                           2 
    126 evento_hora[5]
-                                   1                           1 
+                                   0                           2 
    127 evento_hora[6]
-                                   1                           1 
+                                   2                           2 
    128 evento_hora[7]
-                                   1                           1 
+                                   2                           2 
    129 evento_hora[8]
-                                   1                           1 
+                                   2                           2 
    130 evento_hora[9]
-                                   1                           1 
+                                   1                           2 
 
    No. Column name       Activity     Lower bound   Upper bound
 ------ ------------    ------------- ------------- -------------
      1 tr[ARQ1]     *              1             0             1 
-     2 tr[ARQ2]     *              0             0             1 
-     3 tr[ATL1]     *              0             0             1 
+     2 tr[ARQ2]     *              1             0             1 
+     3 tr[ATL1]     *              1             0             1 
      4 tr[ATL2]     *              1             0             1 
-     5 tr[BAD1]     *              1             0             1 
+     5 tr[BAD1]     *              0             0             1 
      6 tr[BAD2]     *              0             0             1 
      7 y[ARQ1,1]    *              1             0             1 
      8 y[ARQ1,2]    *              1             0             1 
@@ -223,14 +223,14 @@ Objective:  z = 120 (MAXimum)
     18 y[ARQ2,3]    *              0             0             1 
     19 y[ARQ2,4]    *              0             0             1 
     20 y[ARQ2,5]    *              0             0             1 
-    21 y[ARQ2,6]    *              0             0             1 
-    22 y[ARQ2,7]    *              0             0             1 
-    23 y[ARQ2,8]    *              0             0             1 
+    21 y[ARQ2,6]    *              1             0             1 
+    22 y[ARQ2,7]    *              1             0             1 
+    23 y[ARQ2,8]    *              1             0             1 
     24 y[ARQ2,9]    *              0             0             1 
-    25 y[ATL1,1]    *              0             0             1 
-    26 y[ATL1,2]    *              0             0             1 
-    27 y[ATL1,3]    *              0             0             1 
-    28 y[ATL1,4]    *              0             0             1 
+    25 y[ATL1,1]    *              1             0             1 
+    26 y[ATL1,2]    *              1             0             1 
+    27 y[ATL1,3]    *              1             0             1 
+    28 y[ATL1,4]    *              1             0             1 
     29 y[ATL1,5]    *              0             0             1 
     30 y[ATL1,6]    *              0             0             1 
     31 y[ATL1,7]    *              0             0             1 
@@ -248,8 +248,8 @@ Objective:  z = 120 (MAXimum)
     43 y[BAD1,1]    *              0             0             1 
     44 y[BAD1,2]    *              0             0             1 
     45 y[BAD1,3]    *              0             0             1 
-    46 y[BAD1,4]    *              1             0             1 
-    47 y[BAD1,5]    *              1             0             1 
+    46 y[BAD1,4]    *              0             0             1 
+    47 y[BAD1,5]    *              0             0             1 
     48 y[BAD1,6]    *              0             0             1 
     49 y[BAD1,7]    *              0             0             1 
     50 y[BAD1,8]    *              0             0             1 
