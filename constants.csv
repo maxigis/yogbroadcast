@@ -1,31 +1,31 @@
-Nro, Deporte, Categoria, Intercalable, Calidad, Aumento Final, Aumento Especialista
-1, Arqueria, B, SI, 6, 8, 6
-2, Atletismo, A, SI, 5, 10, 10
-3, Badminton, D, NO, 4, 2, 3
-4, Baile, E, SI, 1, 1, 3
-5, Basquet, C, NO, 6, 5, 4
-6, Handball, C, NO, 8, 8, 7
-7, Boxeo, B, NO, 5, 7, 7
-8, Ciclismo, A, SI, 8, 5, 7
-9, Equitacion, D, SI, 4, 2, 1
-10, Escalada, E, SI, 2, 1, 2
-11, Esgrima, A, NO, 5, 8, 8
-12, Futsal, C, NO, 10, 10, 3
-13, Gimnasia, A, SI, 8, 8, 8
-14, Golf, D, SI, 4, 2, 1
-15, Halterofilia, A, SI, 7, 5, 5
-16, Hockey, C, NO, 10, 10, 4
-17, Judo, B, NO, 9, 7, 10
-18, Karate, B, NO, 4, 7, 8
-19, Lucha, B, NO, 4, 6, 8
-20, Natacion, A, SI, 9, 8, 8
-21, Pentatlon, A, SI, 4, 6, 7
-22, Remo, A, SI, 6, 7, 6
-23, Rugby, C, NO, 8, 8, 8
-24, Taekwondo, B, NO, 7, 7, 9
-25, Tenis, C, NO, 8, 10, 5
-26, Tenis de mesa, C, NO, 7, 5, 8
-27, Tiro, D, SI, 5, 3, 2
-28, Triatlon, A, SI, 5, 8, 9
-29, Navegacion a Vela, D, SI, 4, 4, 4
-30, Voley, C, NO, 10, 7, 5
+nro,deporte,categoria,intercalable,calidad,final,especialista
+1,arqueria,B,SI,6,8,6
+2,atletismo,A,SI,5,10,10
+3,badminton,D,NO,4,2,3
+4,baile,E,SI,1,1,3
+5,basquet,C,NO,6,5,4
+6,handball,C,NO,8,8,7
+7,boxeo,B,NO,5,7,7
+8,ciclismo,A,SI,8,5,7
+9,equitacion,D,SI,4,2,1
+10,escalada,E,SI,2,1,2
+11,esgrima,A,NO,5,8,8
+12,futsal,C,NO,10,10,3
+13,gimnasia,A,SI,8,8,8
+14,golf,D,SI,4,2,1
+15,halterofilia,A,SI,7,5,5
+16,hockey,C,NO,10,10,4
+17,judo,B,NO,9,7,10
+18,karate,B,NO,4,7,8
+19,lucha,B,NO,4,6,8
+20,natacion,A,SI,9,8,8
+21,pentatlon,A,SI,4,6,7
+22,remo,A,SI,6,7,6
+23,rugby,C,NO,8,8,8
+24,taekwondo,B,NO,7,7,9
+25,tenis,C,NO,8,10,5
+26,tenis de mesa,C,NO,7,5,8
+27,tiro,D,SI,5,3,2
+28,triatlon,A,SI,5,8,9
+29,navegacion a vela,D,SI,4,4,4
+30,voley,C,NO,10,7,5

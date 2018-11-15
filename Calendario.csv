@@ -1,0 +1,268 @@
+ID,SEDE,DIA,DEPORTE,COMIENZO,FIN,Final
+1,Green Park,1,Tenis,10:00,18:00,no
+2,Green Park,1,Triatlon,11:00,13:00,si
+3,Green Park,1,Voley,09:00,16:50,no
+4,Green Park,1,Futsal,14:00,22:00,no
+5,Urban Park,1,Remo,15:30,17:05,no
+6,Urban Park,1,Basquet,09:00,14:00,no
+7,Urban Park,1,Baile,15:15,18:00,no
+8,Urban Park,1,Escalada,09:00,09:25,no
+9,Urban Park,1,Escalada,12:00,14:10,no
+10,Urban Park,1,Escalada,15:00,16:20,no
+11,Stand Alone,1,Navegacion a Vela,12:00,18:00,no
+12,Stand Alone,1,Ciclismo,11:00,13:00,si
+13,Tecnopolis Park,1,Badminton,09:00,12:30,no
+14,Tecnopolis Park,1,Badminton,13:30,17:00,no
+15,Tecnopolis Park,1,Badminton,18:00,21:00,no
+16,Tecnopolis Park,1,Futsal,14:00,00:22,no
+17,Tecnopolis Park,1,Tenis de mesa,10:00,14:30,no
+18,Tecnopolis Park,1,Tenis de mesa,16:00,20:30,no
+19,Tecnopolis Park,1,Tiro,09:00,12:15,si
+20,Youth Olympic Park,1,Gimnasia,14:00,16:65,no
+21,Youth Olympic Park,1,Gimnasia,19:00,21:50,no
+22,Youth Olympic Park,1,Judo,10:00,12:25,no
+23,Youth Olympic Park,1,Judo,15:00,16:00,si
+24,Youth Olympic Park,1,Halterofilia,16:00,17:30,si
+25,Youth Olympic Park,1,Halterofilia,20:00,21:30,si
+26,Youth Olympic Park,1,Hockey,09:30,18:30,no
+27,Youth Olympic Park,1,Esgrima,09:00,13:35,no
+28,Youth Olympic Park,1,Esgrima,16:30,19:40,si
+29,Youth Olympic Park,1,Natacion,10:00,11:30,no
+30,Youth Olympic Park,1,Natacion,18:00,19:15,si
+31,Youth Olympic Park,1,Taekwondo,14:00,17:00,no
+32,Youth Olympic Park,1,Taekwondo,19:00,21:00,si
+33,Green Park,2,Tenis,10:00,18:00,no
+34,Green Park,2,Triatlon,11:00,13:00,si
+35,Green Park,2,Voley,09:00,16:50,no
+36,Green Park,2,Equitacion,14:00,15:30,no
+37,Urban Park,2,Remo,13:00,14:30,no
+38,Urban Park,2,Remo,15:30,17:00,no
+39,Urban Park,2,Basquet,09:00,14:00,no
+40,Urban Park,2,Baile,15:00,18:00,si
+41,Urban Park,2,Escalada,09:00,09:25,no
+42,Urban Park,2,Escalada,12:00,14:10,no
+43,Urban Park,2,Escalada,15:00,16:20,no
+44,Stand Alone,2,Navegacion a Vela,12:00,18:00,no
+45,Tecnopolis Park,2,Badminton,09:00,12:30,no
+46,Tecnopolis Park,2,Badminton,13:30,17:00,no
+47,Tecnopolis Park,2,Badminton,18:00,21:00,no
+48,Tecnopolis Park,2,Futsal,14:00,22:00,no
+49,Tecnopolis Park,2,Tenis de mesa,10:00,14:30,no
+50,Tecnopolis Park,2,Tenis de mesa,16:00,20:30,no
+51,Tecnopolis Park,2,Tiro,09:00,12:15,si
+52,Tecnopolis Park,2,Handball,10:00,13:20,no
+53,Tecnopolis Park,2,Handball,14:30,17:50,no
+54,Youth Olympic Park,2,Gimnasia,14:00,16:45,no
+55,Youth Olympic Park,2,Gimnasia,19:00,21:25,no
+56,Youth Olympic Park,2,Judo,10:00,12:25,no
+57,Youth Olympic Park,2,Judo,15:00,16:00,si
+58,Youth Olympic Park,2,Halterofilia,16:00,17:30,si
+59,Youth Olympic Park,2,Halterofilia,20:00,21:30,si
+60,Youth Olympic Park,2,Hockey,09:30,18:30,no
+61,Youth Olympic Park,2,Esgrima,09:00,13:45,no
+62,Youth Olympic Park,2,Esgrima,17:00,20:10,si
+63,Youth Olympic Park,2,Natacion,10:00,11:30,no
+64,Youth Olympic Park,2,Natacion,18:00,19:55,si
+65,Youth Olympic Park,2,Taekwondo,14:00,17:00,no
+66,Youth Olympic Park,2,Taekwondo,19:00,21:00,si
+67,Green Park,3,Tenis,10:00,18:00,no
+68,Green Park,3,Voley,09:00,16:50,no
+69,Green Park,3,Equitacion,14:00,16:00,si
+70,Urban Park,3,Remo,15:00,17:25,si
+71,Urban Park,3,Basquet,19:00,14:00,no
+72,Urban Park,3,Escalada,10:00,10:20,no
+73,Urban Park,3,Escalada,12:00,13:15,no
+74,Urban Park,3,Escalada,16:00,16:40,si
+75,Stand Alone,3,Golf,08:30,17:00,no
+76,Stand Alone,3,Navegacion a Vela,12:00,18:00,no
+77,Tecnopolis Park,3,Badminton,09:00,12:30,no
+78,Tecnopolis Park,3,Badminton,13:30,17:00,no
+79,Tecnopolis Park,3,Badminton,18:00,21:00,no
+80,Tecnopolis Park,3,Futsal,14:00,22:00,no
+81,Tecnopolis Park,3,Tenis de mesa,10:00,13:00,no
+82,Tecnopolis Park,3,Tenis de mesa,15:00,21:00,no
+83,Tecnopolis Park,3,Tiro,09:00,12:15,si
+84,Tecnopolis Park,3,Handball,10:00,13:20,no
+85,Tecnopolis Park,3,Handball,14:30,17:50,no
+86,Youth Olympic Park,3,Gimnasia,14:00,16:50,no
+87,Youth Olympic Park,3,Gimnasia,19:00,21:50,no
+88,Youth Olympic Park,3,Judo,10:00,11:40,no
+89,Youth Olympic Park,3,Judo,15:00,15:40,si
+90,Youth Olympic Park,3,Halterofilia,14:30,16:00,si
+91,Youth Olympic Park,3,Halterofilia,18:00,19:30,si
+92,Youth Olympic Park,3,Hockey,09:30,18:30,no
+93,Youth Olympic Park,3,Esgrima,09:00,13:25,no
+94,Youth Olympic Park,3,Esgrima,16:30,19:35,si
+95,Youth Olympic Park,3,Natacion,10:00,11:30,no
+96,Youth Olympic Park,3,Natacion,18:00,19:40,si
+97,Youth Olympic Park,3,Taekwondo,14:00,17:00,no
+98,Youth Olympic Park,3,Taekwondo,19:00,21:00,si
+99,Green Park,4,Tenis,10:00,18:00,no
+100,Green Park,4,Voley,9:00,16:15,no
+101,Green Park,4,Futsal,14:00,22:00,no
+102,Urban Park,4,Remo,14:45,17:25,si
+103,Urban Park,4,Basquet,9:00,14:00,no
+104,Urban Park,4,Escalada,10:00,10:20,no
+105,Urban Park,4,Escalada,12:00,13:15,no
+106,Urban Park,4,Escalada,16:00,16:40,si
+107,Urban Park,4,Ciclismo,10:30,14:30,no
+108,Stand Alone,4,Golf,8:30,17:00,no
+109,Stand Alone,4,Navegacion a Vela,12:00,18:00,no
+110,Tecnopolis Park,4,Badminton,14:00,16:15,no
+111,Tecnopolis Park,4,Badminton,18:00,21:00,no
+112,Tecnopolis Park,4,Futsal,14:00,22:00,no
+113,Tecnopolis Park,4,Tenis de mesa,10:00,13:00,no
+114,Tecnopolis Park,4,Tenis de mesa,16:00,19:30,si
+115,Tecnopolis Park,4,Tiro,9:00,12:15,si
+116,Tecnopolis Park,4,Tiro,13:15,15:30,no
+117,Tecnopolis Park,4,Handball,10:00,13:20,no
+118,Youth Olympic Park,4,Gimnasia,14:00,16:50,no
+119,Youth Olympic Park,4,Gimnasia,19:00,22:10,si
+120,Youth Olympic Park,4,Judo,10:00,13:15,no
+121,Youth Olympic Park,4,Judo,15:00,16:30,si
+122,Youth Olympic Park,4,Hockey,9:30,18:30,no
+123,Youth Olympic Park,4,Esgrima,9:30,15:05,si
+124,Youth Olympic Park,4,Natacion,10:00,11:30,no
+125,Youth Olympic Park,4,Natacion,18:00,19:40,si
+126,Youth Olympic Park,4,Taekwondo,14:00,17:00,no
+127,Youth Olympic Park,4,Taekwondo,19:00,21:00,si
+128,Green Park,5,Tenis,10:00,18:00,no
+129,Green Park,5,Triatlon,11:00,13:30,si
+130,Green Park,5,Voley,9:00,16:50,no
+131,Urban Park,5,Basquet,10:00,15:00,no
+132,Urban Park,5,Ciclismo,11:00,13:30,si
+133,Stand Alone,5,Golf,8:30,17:20,si
+134,Stand Alone,5,Navegacion a Vela,12:00,18:00,no
+135,Tecnopolis Park,5,Badminton,12:00,15:20,no
+136,Tecnopolis Park,5,Badminton,18:00,21:00,no
+137,Tecnopolis Park,5,Futsal,14:00,22:00,no
+138,Tecnopolis Park,5,Tiro,9:00,12:30,si
+139,Tecnopolis Park,5,Tiro,13:45,16:00,no
+140,Tecnopolis Park,5,Handball,10:00,13:20,no
+141,Tecnopolis Park,5,Handball,14:30,17:50,no
+142,Youth Olympic Park,5,Gimnasia,17:00,21:05,si
+143,Youth Olympic Park,5,Halterofilia,14:30,16:00,si
+144,Youth Olympic Park,5,Halterofilia,18:00,19:30,si
+145,Youth Olympic Park,5,Hockey,9:30,18:30,no
+146,Youth Olympic Park,5,Atletismo,14:30,17:25,no
+147,Youth Olympic Park,5,Natacion,10:00,11:30,no
+148,Youth Olympic Park,5,Natacion,18:00,19:30,si
+149,Youth Olympic Park,5,Taekwondo,14:00,17:00,no
+150,Youth Olympic Park,5,Taekwondo,19:00,21:00,si
+151,Green Park,6,Tenis,10:00,18:00,no
+152,Green Park,6,Voley,9:00,16:50,no
+153,Green Park,6,Equitacion,14:00,15:30,no
+154,Urban Park,6,Basquet,10:00,15:00,no
+155,Stand Alone,6,Navegacion a Vela,12:00,18:00,si
+156,Tecnopolis Park,6,Arqueria,10:00,13:00,no
+157,Tecnopolis Park,6,Badminton,11:00,12:40,no
+158,Tecnopolis Park,6,Badminton,13:30,15:00,no
+159,Tecnopolis Park,6,Badminton,15:30,19:15,si
+160,Tecnopolis Park,6,Futsal,14:00,22:00,no
+161,Tecnopolis Park,6,Tenis de mesa,10:00,14:30,no
+162,Tecnopolis Park,6,Tenis de mesa,16:00,20:30,no
+163,Tecnopolis Park,6,Tiro,9:00,12:30,si
+164,Tecnopolis Park,6,Handball,10:00,13:20,no
+165,Tecnopolis Park,6,Handball,14:30,17:50,no
+166,Youth Olympic Park,6,Gimnasia,17:00,19:25,si
+167,Youth Olympic Park,6,Lucha,10:00,11:15,no
+168,Youth Olympic Park,6,Lucha,17:00,19:30,si
+169,Youth Olympic Park,6,Halterofilia,14:30,16:00,si
+170,Youth Olympic Park,6,Halterofilia,18:00,19:30,si
+171,Youth Olympic Park,6,Hockey,8:00,18:00,no
+172,Youth Olympic Park,6,Pentatlon,10:00,11:45,no
+173,Youth Olympic Park,6,Pentatlon,14:00,15:45,no
+174,Youth Olympic Park,6,Atletismo,14:30,17:30,no
+175,Youth Olympic Park,6,Natacion,10:00,11:30,no
+176,Youth Olympic Park,6,Natacion,18:00,19:50,si
+177,Green Park,7,Tenis,10:00,18:00,si
+178,Green Park,7,Ciclismo,11:00,13:00,no
+179,Green Park,7,Voley,9:00,16:50,no
+180,Green Park,7,Futsal,14:00,22:00,no
+181,Green Park,7,Equitacion,14:00,16:00,si
+182,Urban Park,7,Basquet,10:00,15:00,no
+183,Stand Alone,7,Golf,8:30,14:30,no
+184,Stand Alone,7,Navegacion a Vela,12:00,18:00,si
+185,Stand Alone,7,Rugby,12:00,14:30,no
+186,Stand Alone,7,Rugby,15:05,17:35,no
+187,Tecnopolis Park,7,Arqueria,9:00,13:50,no
+188,Tecnopolis Park,7,Futsal,14:00,22:00,no
+189,Tecnopolis Park,7,Tenis de mesa,10:00,14:30,no
+190,Tecnopolis Park,7,Tenis de mesa,16:00,20:30,no
+191,Tecnopolis Park,7,Handball,9:30,12:50,no
+192,Tecnopolis Park,7,Handball,14:10,18:00,si
+193,Youth Olympic Park,7,Gimnasia,17:00,20:00,si
+194,Youth Olympic Park,7,Lucha,10:00,14:10,no
+195,Youth Olympic Park,7,Lucha,17:00,19:55,si
+196,Youth Olympic Park,7,Halterofilia,14:30,16:00,si
+197,Youth Olympic Park,7,Halterofilia,18:00,19:30,si
+198,Youth Olympic Park,7,Hockey,8:00,18:00,no
+199,Youth Olympic Park,7,Atletismo,14:30,17:50,no
+200,Youth Olympic Park,7,Pentatlon,14:00,16:55,si
+201,Youth Olympic Park,7,Pentatlon,12:00,12:30,no
+202,Green Park,8,Tenis,10:00,18:00,si
+203,Green Park,8,Ciclismo,11:00,15:30,no
+204,Green Park,8,Voley,9:00,16:50,no
+205,Urban Park,8,Basquet,10:00,15:00,no
+206,Stand Alone,8,Golf,8:30,16:30,no
+207,Stand Alone,8,Rugby,12:00,14:30,no
+208,Stand Alone,8,Rugby,15:05,17:35,no
+209,Tecnopolis Park,8,Arqueria,9:00,11:25,no
+210,Tecnopolis Park,8,Arqueria,14:00,16:45,si
+211,Tecnopolis Park,8,Tenis de mesa,10:00,13:00,no
+212,Tecnopolis Park,8,Tenis de mesa,17:00,20:00,no
+213,Youth Olympic Park,8,Gimnasia,17:00,19:55,si
+214,Youth Olympic Park,8,Lucha,10:00,11:15,no
+215,Youth Olympic Park,8,Lucha,17:00,19:30,si
+216,Youth Olympic Park,8,Hockey,8:30,12:30,no
+217,Youth Olympic Park,8,Hockey,13:00,18:00,si
+218,Youth Olympic Park,8,Atletismo,14:00,17:50,si
+219,Youth Olympic Park,8,Pentatlon,14:00,16:55,si
+220,Youth Olympic Park,8,Pentatlon,12:00,12:30,no
+221,Youth Olympic Park,8,Boxeo,13:00,16:15,no
+222,Youth Olympic Park,8,Boxeo,18:00,20:45,no
+223,Green Park,9,Ciclismo,11:00,13:45,no
+224,Green Park,9,Voley,9:00,16:50,no
+225,Urban Park,9,Basquet,13:30,17:15,si
+226,Stand Alone,9,Golf,8:30,16:45,si
+227,Stand Alone,9,Rugby,9:00,11:30,no
+228,Stand Alone,9,Rugby,13:30,17:00,si
+229,Tecnopolis Park,9,Arqueria,9:00,12:45,no
+230,Tecnopolis Park,9,Arqueria,14:00,17:45,no
+231,Tecnopolis Park,9,Futsal,14:00,22:00,no
+232,Tecnopolis Park,9,Tenis de mesa,10:00,13:00,no
+233,Tecnopolis Park,9,Tenis de mesa,17:00,20:15,si
+234,Youth Olympic Park,9,Gimnasia,17:00,20:50,si
+235,Youth Olympic Park,9,Pentatlon,12:00,15:00,no
+236,Youth Olympic Park,9,Atletismo,13:35,18:00,si
+237,Youth Olympic Park,9,Atletismo,10:00,10:45,no
+238,Youth Olympic Park,9,Boxeo,13:00,16:15,no
+239,Youth Olympic Park,9,Boxeo,18:00,20:45,no
+240,Green Park,10,Ciclismo,11:00,13:00,no
+241,Green Park,10,Voley,10:00,11:50,no
+242,Green Park,10,Voley,15:00,16:50,no
+243,Urban Park,10,Basquet,12:00,14:00,no
+244,Urban Park,10,Basquet,15:00,17:00,no
+245,Tecnopolis Park,10,Arqueria,10:00,11:55,no
+246,Tecnopolis Park,10,Arqueria,14:00,16:15,si
+247,Youth Olympic Park,10,Gimnasia,17:00,19:15,si
+248,Youth Olympic Park,10,Atletismo,13:45,18:10,si
+249,Youth Olympic Park,10,Pentatlon,14:00,16:55,si
+250,Youth Olympic Park,10,Pentatlon,12:00,12:30,no
+251,Youth Olympic Park,10,Boxeo,13:00,16:30,no
+252,Youth Olympic Park,10,Boxeo,18:00,21:00,no
+253,Green Park,11,Ciclismo,11:00,14:40,si
+254,Green Park,11,Voley,10:00,12:35,si
+255,Green Park,11,Voley,14:00,16:35,si
+256,Urban Park,11,Basquet,11:00,15:30,si
+257,Tecnopolis Park,11,Arqueria,10:00,11:55,no
+258,Tecnopolis Park,11,Arqueria,14:00,16:15,si
+259,Tecnopolis Park,11,Futsal,14:00,20:30,si
+260,Youth Olympic Park,11,Karate,10:00,13:10,no
+261,Youth Olympic Park,11,Karate,15:00,16:25,si
+262,Youth Olympic Park,11,Boxeo,13:00,16:25,si
+263,Youth Olympic Park,11,Boxeo,18:00,21:25,si
+264,Tecnopolis Park,12,Futsal,9:00,15:30,si
+265,Youth Olympic Park,12,Karate,9:00,12:10,no
+266,Youth Olympic Park,12,Karate,14:00,15:25,si
+267,Youth Olympic Park,12,Boxeo,13:00,17:05,si
