@@ -1,3 +1,4 @@
+from __future__ import print_function
 import argparse
 import csv
 from collections import OrderedDict
@@ -12,9 +13,11 @@ with open(CONSTANTES_FILE) as f:
 with open(CALENDARIO_FILE) as f:
     EVENTOS_RAW = list(csv.DictReader(f))
 
-PERIODISTAS = [1, 2, 3, 4, 5]
+PERIODISTAS = ['P1', 'P2', 'P3', 'P4', 'P5']
+CANALES = ['C1', 'C2']
+DIAS = ['D{}'.format(n) for n in range(1, 12+1)]
 CATEGORIAS = ['A', 'B', 'C', 'D', 'E']
-DEPORTES = { x['deporte']: int(x['nro']) for x in CONSTANTES}
+DEPORTES = [x['deporte'] for x in CONSTANTES] # Mismo orden que el archivo
 DEPORTES_SHORT = {
     'arqueria': 'ARQ',
     'atletismo': 'ATL',
@@ -58,21 +61,21 @@ SEDES_SHORT = {
 
 
 ESPECIALISTAS = {
-    1: set(x['deporte'] for x in CONSTANTES if x['deporte'] != 'baile'),
-    2: set(x['deporte'] for x in CONSTANTES if x['deporte'] == 'baile' or x['categoria'] == 'C'),
-    3: set(x['deporte'] for x in CONSTANTES if x['categoria'] in ('B', 'C')),
-    4: set(x['deporte'] for x in CONSTANTES if x['categoria'] in ('A', 'D')),
-    5: set(x['deporte'] for x in CONSTANTES if x['categoria'] in ('A', 'B')),
+    'P1': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['deporte'] != 'baile'),
+    'P2': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['deporte'] == 'baile' or x['categoria'] == 'C'),
+    'P3': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] in ('B', 'C')),
+    'P4': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] in ('A', 'D')),
+    'P5': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] in ('A', 'B')),
 }
 
 # Si posee especialistas -> lo puede cubrir
 # Agrego ademas los que puede cubrir sin ser especialistas.
 PUEDE_CUBRIR = {
-    1: set(x['deporte'] for x in CONSTANTES),
-    2: ESPECIALISTAS[2] | set(x['deporte'] for x in CONSTANTES if x['categoria'] == 'B'),
-    3: ESPECIALISTAS[3] | set(x['deporte'] for x in CONSTANTES if x['categoria'] == 'C'),
-    4: ESPECIALISTAS[4] | set(x['deporte'] for x in CONSTANTES if x['categoria'] == 'D'),
-    5: ESPECIALISTAS[5],
+    'P1': set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES),
+    'P2': ESPECIALISTAS['P2'] | set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] == 'B'),
+    'P3': ESPECIALISTAS['P3'] | set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] == 'A'),
+    'P4': ESPECIALISTAS['P4'] | set(DEPORTES_SHORT[x['deporte']] for x in CONSTANTES if x['categoria'] == 'C'),
+    'P5': ESPECIALISTAS['P5'],
 }
 
 class Evento(object):
@@ -98,13 +101,48 @@ class Evento(object):
 
 EVENTOS = [Evento(**x) for x in EVENTOS_RAW]
 
+def puede_cubrir(periodista, deporte):
+    return deporte in PUEDE_CUBRIR[periodista]
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('dias', type=int, help='La cantidad de dias')
     return parser.parse_args()
 
+def output_deportes():
+    print('set DEPORTES := ', ' '.join(DEPORTES_SHORT[d] for d in DEPORTES), ';')
+
+def output_canales():
+    print('set CANALES := ', ' '.join(CANALES), ';')
+
+def output_periodistas():
+    print('set PERIODISTAS := ', ' '.join(map(str, PERIODISTAS)), ';')
+
+def output_sedes():
+    print('set SEDES := ', ' '.join(SEDES_SHORT.values()), ';')
+
+def output_dias(dias):
+    print('set DIAS := ', ' '.join(map(str, range(1, dias+1))), ';')
+
+def output_eventos(evts):
+    print('set EVENTOS := ', ' '.join(e.short_name() for e in evts), ';')
+
+def output_puede_cubrir(evts):
+    # Header
+    print('set PUEDE_CUBRIR : ', ' '.join(e.short_name() for e in evts), ':=')
+    for p in PERIODISTAS:
+        print(p, ' ', ' '.join(str(int(puede_cubrir(p, e.deporte))) for e in evts))
+    print(';')
+
 def parsear_opciones(dias):
-    eventos = [ evento for evento in EVENTOS if evento.dia <= dias ]
+    eventos = [ evento for evento in EVENTOS if evento.dia == 12 ]
+    output_canales()
+    output_dias(dias)
+    output_deportes()
+    output_sedes()
+    output_periodistas()
+    #output_eventos(eventos)
+    #output_puede_cubrir(eventos)
     return eventos
 
 def main():
