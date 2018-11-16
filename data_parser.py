@@ -114,6 +114,8 @@ class Evento(object):
         self.deporte = DEPORTES_SHORT[kw['DEPORTE'].lower()]
         self.start = self.adjust_start(kw['COMIENZO'])
         self.end = self.adjust_end(kw['FIN'])
+        self.start_block = self.get_bloque(self.start)
+        self.end_block = self.get_bloque(self.end)
         self.final = bool_sino(kw['Final'])
 
     def short_name(self):
@@ -174,6 +176,10 @@ class Evento(object):
     def calidad_especial(self):
         return DATOS[self._deporte]['especialista']
 
+    @property
+    def duracion(self):
+        return self.end_block - self.start_block
+
     def __repr__(self):
         return repr(self.__dict__)
 
@@ -214,13 +220,19 @@ def output_param_bloques():
 def output_param_comienzo(eventos):
     print('param COMIENZO :=')
     for e in eventos:
-        print(e.short_name(), ' ', e.get_bloque(e.start))
+        print(e.short_name(), ' ', e.start_block)
     print(';')
 
 def output_param_fin(eventos):
     print('param FIN :=')
     for e in eventos:
-        print(e.short_name(), ' ', e.get_bloque(e.end))
+        print(e.short_name(), ' ', e.end_block)
+    print(';')
+
+def output_param_duracion(eventos):
+    print('param DUR :=')
+    for e in eventos:
+        print(e.short_name(), ' ', e.duracion)
     print(';')
 
 def output_param_final(eventos):
@@ -318,6 +330,7 @@ def parsear_opciones(dias, single):
     # Parametos que cambian con los eventos
     output_param_comienzo(eventos)
     output_param_fin(eventos)
+    output_param_duracion(eventos)
     output_param_final(eventos)
     output_param_es_sede(eventos)
     output_param_es_deporte(eventos)
