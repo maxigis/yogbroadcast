@@ -82,6 +82,28 @@ PUEDE_CUBRIR = {
     'P5': ESPECIALISTAS['P5'],
 }
 
+
+# Funciones Auxiliares
+
+def puede_cubrir(periodista, deporte):
+    return deporte in PUEDE_CUBRIR[periodista]
+
+
+def posee_especialista(periodista, deporte):
+    return deporte in ESPECIALISTAS[periodista]
+
+
+def bool_sino(si_no):
+    return 1 if si_no.lower() == 'si' else 0
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('dias', type=int, help='La cantidad de dias')
+    parser.add_argument('-s', '--single', help='Un solo dia en vez de un rango', action='store_true')
+    return parser.parse_args()
+
+
 class Evento(object):
 
     def __init__(self, **kw):
@@ -92,14 +114,16 @@ class Evento(object):
         self.deporte = DEPORTES_SHORT[kw['DEPORTE'].lower()]
         self.start = self.adjust_start(kw['COMIENZO'])
         self.end = self.adjust_end(kw['FIN'])
-        self.final = self.bool_final(kw['Final'])
+        self.final = bool_sino(kw['Final'])
 
     def short_name(self):
         return "{0.deporte}_{0._id}".format(self)
 
-    @staticmethod
-    def bool_final(si_no):
-        return si_no == 'si'
+    def es_sede(self, sede):
+        return 1 if self.sede == sede else 0
+
+    def es_deporte(self, deporte):
+        return 1 if self.deporte == deporte else 0
 
     @staticmethod
     def adjust_start(start):
@@ -152,16 +176,8 @@ class Evento(object):
 
 EVENTOS = [Evento(**x) for x in EVENTOS_RAW]
 
-def puede_cubrir(periodista, deporte):
-    return deporte in PUEDE_CUBRIR[periodista]
 
-def posee_especialista(periodista, deporte):
-    return deporte in ESPECIALISTAS[periodista]
-
-def parse_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('dias', type=int, help='La cantidad de dias')
-    return parser.parse_args()
+# Output de SETS
 
 def output_deportes():
     print('set DEPORTES := ', ' '.join(DEPORTES_SHORT[d] for d in DEPORTES), ';')
@@ -190,6 +206,8 @@ def output_param_bloques():
         print(h, ' ', i+1)
     print(';')
 
+# Parametros de eventos
+
 def output_param_comienzo(eventos):
     print('param COMIENZO :=')
     for e in eventos:
@@ -201,6 +219,27 @@ def output_param_fin(eventos):
     for e in eventos:
         print(e.short_name(), ' ', e.get_bloque(e.end))
     print(';')
+
+def output_param_final(eventos):
+    print('param ES_FINAL :=')
+    for e in eventos:
+        print(e.short_name(), ' ', e.final)
+    print(';')
+
+def output_param_es_sede(eventos):
+    print('param ES_SEDE: ', ' '.join(SEDES_SHORT.values()), ':=')
+    for e in eventos:
+        print(e.short_name(), ' ', ' '.join(str(e.es_sede(s)) for s in SEDES_SHORT.values()))
+    print(';')
+
+def output_param_es_deporte(eventos):
+    print('param DEP_EVENTO: ', ' '.join(L_DEPORTES_SHORT), ':=')
+    for e in eventos:
+        print(e.short_name(), ' ', ' '.join(str(e.es_deporte(d)) for d in L_DEPORTES_SHORT))
+    print(';')
+
+
+# Parametros de Deportes
 
 def output_param_calidad():
     print('param CALIDAD :=')
@@ -220,6 +259,12 @@ def output_param_calidad_especial():
         print(DEPORTES_SHORT[d], ' ', DATOS[d]['especialista'])
     print(';')
 
+def output_param_intercalable():
+    print('param INTERCALABLE :=')
+    for d in DEPORTES:
+        print(DEPORTES_SHORT[d], ' ', bool_sino(DATOS[d]['intercalable']))
+    print(';')
+
 def output_param_puede_cubrir():
     # Header
     print('param PUEDE_CUBRIR : ', ' '.join(L_DEPORTES_SHORT), ':=')
@@ -235,8 +280,13 @@ def output_param_especialista():
     print(';')
 
 
-def parsear_opciones(dias):
-    eventos = [ evento for evento in EVENTOS if evento.dia == dias ]
+def parsear_opciones(dias, single):
+    if single:
+        f = lambda x,y: x==y
+    else:
+        f = lambda x,y: x<=y
+
+    eventos = [ evento for evento in EVENTOS if f(evento.dia, dias) ]
 
     # Imprimo los sets
     output_dias(dias)
@@ -252,17 +302,21 @@ def parsear_opciones(dias):
     output_param_calidad()
     output_param_calidad_final()
     output_param_calidad_especial()
+    output_param_intercalable()
     output_param_puede_cubrir()
     output_param_especialista()
 
     # Parametos que cambian con los eventos
     output_param_comienzo(eventos)
     output_param_fin(eventos)
-    return eventos
+    output_param_final(eventos)
+    output_param_es_sede(eventos)
+    output_param_es_deporte(eventos)
+
 
 def main():
     args = parse_args()
-    parsear_opciones(args.dias)
+    parsear_opciones(**vars(args))
 
 if __name__ == '__main__':
     main()
