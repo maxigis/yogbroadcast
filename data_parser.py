@@ -125,6 +125,9 @@ class Evento(object):
     def es_deporte(self, deporte):
         return 1 if self.deporte == deporte else 0
 
+    def es_dia(self, dia):
+        return 1 if 'D{}'.format(self.dia) == dia else 0
+
     @staticmethod
     def adjust_start(start):
         h, m = start.split(':')
@@ -238,6 +241,12 @@ def output_param_es_deporte(eventos):
         print(e.short_name(), ' ', ' '.join(str(e.es_deporte(d)) for d in L_DEPORTES_SHORT))
     print(';')
 
+def output_param_es_dia(eventos):
+    print('param DIAS_EVENTOS: ', ' '.join(DIAS), ':=')
+    for e in eventos:
+        print(e.short_name(), ' ', ' '.join(str(e.es_dia(d)) for d in DIAS))
+    print(';')
+
 
 # Parametros de Deportes
 
@@ -312,6 +321,7 @@ def parsear_opciones(dias, single):
     output_param_final(eventos)
     output_param_es_sede(eventos)
     output_param_es_deporte(eventos)
+    output_param_es_dia(eventos)
 
 
 def main():
