@@ -319,7 +319,7 @@ def parsear_opciones(dias, single):
     output_eventos(eventos)
 
     # Parametros que no cambian con los eventos
-    #output_param_bloques()
+    output_param_bloques()
     output_param_calidad()
     output_param_calidad_final()
     output_param_calidad_especial()
