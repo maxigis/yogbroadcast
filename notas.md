@@ -1,3 +1,5 @@
+# Notas
+
 ## Horarios
 
 El horario mínimo de comienzo es '08:00', el máximo horario de finalización es '22:00'. Es decir
@@ -7,3 +9,4 @@ podemos establecer bloques horarios de 15 minutos, y ajustar los eventos al bloq
 cercano.
 
 Por ejemplo un evento 09:25 - 10:55 se ajustaría a 09:15 - 11:00
+
