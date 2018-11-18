@@ -71,7 +71,7 @@ s.t. dia_evento {e in EVENTOS, h in HORAS, c in CANALES, d in DIAS}: y[e, h, c, 
 s.t. comienzo {e in EVENTOS, h in HORAS, c in CANALES, d in DIAS}: BLOQUES[h] >= COMIENZO[e] * y[e, h, c, d];
 
 # Un evento no puede transmitirse en un bloque horario posterior a su bloque horario de finalizacion
-s.t. fin {e in EVENTOS, h in HORAS, c in CANALES, d in DIAS}: FIN[e] * y[e, h, c, d] >= BLOQUES[h]+1;
+s.t. fin {e in EVENTOS, h in HORAS, c in CANALES, d in DIAS}: FIN[e] >= (BLOQUES[h]+1) * y[e, h, c, d];
 
 # Si un evento se transmite, todos sus bloques deben transmitirse
 s.t. dur_inf {e in EVENTOS}: DUR[e] * t[e] <= sum{h in HORAS, c in CANALES, d in DIAS} y[e, h, c, d];

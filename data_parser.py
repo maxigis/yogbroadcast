@@ -204,7 +204,7 @@ def output_sedes():
     print('set SEDES := ', ' '.join(SEDES_SHORT.values()), ';')
 
 def output_dias(dias):
-    print('set DIAS := ', ' '.join(DIAS[:dias]), ';')
+    print('set DIAS := ', ' '.join(DIAS), ';')
 
 def output_eventos(evts):
     print('set EVENTOS := ', ' '.join(e.short_name() for e in evts), ';')
