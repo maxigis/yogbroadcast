@@ -215,6 +215,12 @@ def output_param_bloques():
         print(h, ' ', i+1)
     print(';')
 
+# Parametros globales
+
+def output_param_m():
+    print('param M := 999;')
+
+
 # Parametros de eventos
 
 def output_param_comienzo(eventos):
@@ -318,6 +324,9 @@ def parsear_opciones(dias, single):
     output_periodistas()
     output_eventos(eventos)
 
+
+    output_param_m()
+
     # Parametros que no cambian con los eventos
     output_param_bloques()
     output_param_calidad()
@@ -335,6 +344,8 @@ def parsear_opciones(dias, single):
     output_param_es_sede(eventos)
     output_param_es_deporte(eventos)
     output_param_es_dia(eventos)
+
+    print("end;")
 
 
 def main():
