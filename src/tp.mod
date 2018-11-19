@@ -61,7 +61,7 @@ maximize z: sum{e in EVENTOS, d in DEPORTES} ( t[e] * DEP_EVENTO[e, d] * ( CALID
 ################################################################################
 
 
-# Un evento no puede transmitirse en mas de un canal
+# Un bloque de evento no puede transmitirse en mas de un canal
 s.t. un_canal {e in EVENTOS, h in HORAS, d in DIAS}: sum{c in CANALES} y[e, h, c, d] <= 1;
 
 # Un evento no puede transmitirse un dia que no ocurra el evento
@@ -80,6 +80,9 @@ s.t. dur_sup {e in EVENTOS}: DUR[e] * t[e] >= sum{h in HORAS, c in CANALES, d in
 # En que canal se transmite un evento
 s.t. canal_inf {e in EVENTOS, c in CANALES}: en_canal[e, c] <= sum{h in HORAS, d in DIAS} y[e, h, c, d];
 s.t. canal_sup {e in EVENTOS, c in CANALES}: en_canal[e, c] * DUR[e] >= sum{h in HORAS, d in DIAS} y[e, h, c, d];
+
+# Un evento entero no puede transmitirse en mas de un canal
+s.t. un_canal_evt {e in EVENTOS}: sum{c in CANALES} en_canal[e, c] <= 1;
 
 # En un determinado bloque horario, se pueden transmitir a lo sumo 2 eventos por canal en el caso de haber superposicion
 s.t. super {h in HORAS, c in CANALES, d in DIAS}: sum{e in EVENTOS} y[e, h, c, d] <= adm_sup[h, c, d] + 1;
