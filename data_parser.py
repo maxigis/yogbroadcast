@@ -17,7 +17,7 @@ with open(CALENDARIO_FILE) as f:
 PERIODISTAS = ['P1', 'P2', 'P3', 'P4', 'P5']
 CANALES = ['C1', 'C2']
 DIAS = ['D{}'.format(n) for n in range(1, 12+1)]
-HORAS = ['H{}'.format(n) for n in range(1, 56+1)]
+HORAS = ['H{}'.format(n) for n in range(1, 28+1)]
 CATEGORIAS = ['A', 'B', 'C', 'D', 'E']
 DEPORTES = [x['deporte'] for x in CONSTANTES] # Mismo orden que el archivo
 DATOS = {x['deporte']: x for x in CONSTANTES}
@@ -134,7 +134,7 @@ class Evento(object):
     def adjust_start(start):
         h, m = start.split(':')
         m = int(m)
-        aux = [0, 15, 30, 45, 60]
+        aux = [0, 30, 60]
         for i, _m in enumerate(aux):
             if m < _m:
                 m = aux[i-1]
@@ -145,7 +145,7 @@ class Evento(object):
     def adjust_end(end):
         h, m = end.split(':')
         m = int(m)
-        aux = [60, 45, 30, 15, 0]
+        aux = [60, 30, 0]
         for i, _m in enumerate(aux):
             if m > _m:
                 m = aux[i-1]
@@ -162,7 +162,7 @@ class Evento(object):
         22:00 debo obtener el numero de bloque
         """
         h, m = timestamp.split(':')
-        return (4 * (int(h)-8)) + (int(m) / 15) + 1
+        return (2 * (int(h)-8)) + (int(m) / 30) + 1
 
     @property
     def calidad(self):
