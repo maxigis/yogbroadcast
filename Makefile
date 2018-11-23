@@ -1,5 +1,5 @@
 IBM_PATH = '/opt/ibm/ILOG/CPLEX_Studio128/cplex/bin/x86-64_linux/cplex'
-MODEL = src/tp.mod
+MODEL = src/tp_eq.mod
 CPLEX_MODEL = /tmp/tp.lp
 CPLEX_OUTPUT = /tmp/cplex.sol
 GLPK = glpsol
